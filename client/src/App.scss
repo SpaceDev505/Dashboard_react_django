@@ -1,0 +1,143 @@
+// @import 'react-alice-carousel/lib/scss/alice-carousel.scss';
+// @import 'react-month-picker/scss/month-picker.scss';
+// @import 'rsuite/dist/rsuite.css';
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#root {
+  display: flex;
+  // flex: 1;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url(assets/background.svg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.auth {
+  overflow: hidden;
+  width: 100%;
+  max-height: 100vh;
+
+
+  .auth-form {
+    position: absolute;
+    width: 491px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: flex;
+    padding: 48px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 14%,
+     rgba(255, 255, 255, 0.04) 86%);
+    box-shadow: 1px 2px 8px #B81FFD;
+    border-radius: 4px;
+    box-sizing: border-box;
+    .auth-header {
+      display: flex;
+      flex-direction: row;
+      padding: 48px;
+      gap: 32px;
+      .subtitle {
+        // color: var(--white, #FFF);
+        /* Headline / H5 */
+        font-family: Open Sans;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px; /* 150% */
+      }
+      .link {
+        font-family: Public Sans;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        border-radius: 6px;
+        align-self: stretch;
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        background: linear-gradient(269.95deg, #e323ff 0.02%, #7517f8 97.45%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+    .auth-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .email {
+        width: 395px;
+        height: 48px;
+        border-radius: 5px;
+        background: var(--grayscale-gray-9, #0F0F13);
+        color: aliceblue;
+      }
+      .password {
+        width: 395px;
+        height: 48px;
+        border-radius:  5px;
+        background: var(--grayscale-gray-9, #0F0F13);
+        color: white;
+      }
+      .submit {
+        width: 395px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 24px;
+        background: #5F37FB;
+        border-radius: 6px;
+      }
+    }
+  }
+}
